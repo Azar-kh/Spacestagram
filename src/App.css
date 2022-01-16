@@ -1,0 +1,66 @@
+* {
+	user-select: none;
+	box-sizing: border-box;
+}
+
+:root {
+	--background: white;
+	--text-primary: #444444;
+	--text-secondary: #888888;
+	--card-background: #f9f3f3;
+	--mode-btn: #fc5e5e;
+	--box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+[data-theme="dark"] {
+	--background: #525252;
+	--text-primary: #ededed;
+	--text-secondary: #ededed;
+	--card-background: #313131;
+	--box-shadow: rgb(68, 68, 68, 0.9) 0px 2px 8px 5px;
+}
+body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+.container {
+	background-color: var(--background);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.1s ease-in;
+}
+
+.header {
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 10px 0;
+	padding: 0 60px;
+	color: var(--text-primary);
+}
+
+.header button {
+	background-color: var(--card-background);
+	color: var(--text-secondary);
+	height: 50px;
+	width: 180px;
+	font-weight: bold;
+	border-radius: 20px;
+	border: none;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.header button:hover {
+	background-color: var(--mode-btn);
+	color: var(--text-primary);
+}
+
+.header button:active {
+	transform: scale(0.98);
+}
