@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './style.css'
 
 const Header = ({ switchTheme, theme }) => {
@@ -13,6 +14,11 @@ const Header = ({ switchTheme, theme }) => {
       </button>
     </div>
   )
+}
+
+Header.propTypes = {
+  switchTheme: PropTypes.func.isRequired,
+  theme: PropTypes.string,
 }
 
 export default Header

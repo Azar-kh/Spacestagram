@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import './style.css'
 
 const ImgItem = ({ date, hdurl, title, copyright }) => {
@@ -34,6 +35,13 @@ const ImgItem = ({ date, hdurl, title, copyright }) => {
       </div>
     </div>
   )
+}
+
+ImgItem.propTypes = {
+  date: PropTypes.string,
+  hdurl: PropTypes.string,
+  title: PropTypes.string,
+  copyright: PropTypes.string,
 }
 
 export default ImgItem

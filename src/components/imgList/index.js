@@ -1,5 +1,6 @@
 import React from 'react'
 import ImgItem from '../imgItem'
+import PropTypes from 'prop-types'
 import './style.css'
 
 const ImgList = ({ imgList }) => {
@@ -19,6 +20,10 @@ const ImgList = ({ imgList }) => {
       )}
     </div>
   )
+}
+
+ImgList.propTypes = {
+  imgList: PropTypes.array,
 }
 
 export default ImgList
