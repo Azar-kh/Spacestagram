@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
 * {
 	user-select: none;
 	box-sizing: border-box;
@@ -23,6 +25,7 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
+	font-family: "Lato", sans-serif;
 }
 
 .container {
@@ -32,35 +35,4 @@ body {
 	justify-content: center;
 	align-items: center;
 	transition: all 0.1s ease-in;
-}
-
-.header {
-	width: 100vw;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	margin: 10px 0;
-	padding: 0 60px;
-	color: var(--text-primary);
-}
-
-.header button {
-	background-color: var(--card-background);
-	color: var(--text-secondary);
-	height: 50px;
-	width: 180px;
-	font-weight: bold;
-	border-radius: 20px;
-	border: none;
-	cursor: pointer;
-	transition: all 0.2s ease;
-}
-
-.header button:hover {
-	background-color: var(--mode-btn);
-	color: var(--text-primary);
-}
-
-.header button:active {
-	transform: scale(0.98);
 }

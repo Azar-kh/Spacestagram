@@ -5,6 +5,7 @@ import useLocalStorage from 'use-local-storage'
 import './App.css'
 import ImgList from './components/imgList'
 import PreLoader from './components/loading'
+import Header from './components/header'
 
 const App = () => {
   const [imgList, setImgList] = useState([])
@@ -20,14 +21,14 @@ const App = () => {
     try {
       setLoading(true)
       const res = await axios(
-        `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API_KEY}&start_date=2021-11-01`,
+        `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API_KEY}&start_date=2022-01-01`,
       )
       const data = await res.data
       console.log(data)
       setImgList(data)
       setLoading(false)
     } catch (error) {
-      console.log(error)
+      return <h1>Something went wrong!</h1>
     }
   }, [])
 
@@ -44,12 +45,7 @@ const App = () => {
         <PreLoader />
       ) : (
         <Fragment>
-          <div className="header">
-            <h1>Spacestagram</h1>
-            <button onClick={switchTheme}>
-              Switch to {theme === 'light' ? 'dark' : 'light'} mode
-            </button>
-          </div>
+          <Header switchTheme={switchTheme} theme={theme} />
 
           <ImgList imgList={imgList} />
         </Fragment>

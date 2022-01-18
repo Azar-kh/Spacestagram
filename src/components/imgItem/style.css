@@ -38,6 +38,7 @@
 	background-color: var(--card-background);
 	display: flex;
 	justify-content: space-between;
+	margin-top: 10px;
 	height: 90px;
 	color: var(--text-secondary);
 	border-bottom-left-radius: 20px;
@@ -52,10 +53,11 @@
 	font-size: 14px;
 }
 
-.date {
+.card-info span {
 	font-size: 13px;
 	font-weight: bold;
 }
+
 .btn {
 	height: 60px;
 	width: 60px;

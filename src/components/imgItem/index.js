@@ -19,7 +19,10 @@ const ImgItem = ({ date, hdurl, title, copyright }) => {
       <div className="card-content">
         <div className="card-info">
           <span className="date">{date}</span>
-          <span>Copyright: {copyright ? copyright : 'Unknown'}</span>
+          <br />
+          <span className="copyright">
+            Copyright: {copyright ? copyright : 'Unknown'}
+          </span>
         </div>
 
         <span className="btn">
