@@ -21,13 +21,14 @@ const App = () => {
     try {
       setLoading(true)
       const res = await axios(
-        `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API_KEY}&start_date=2022-01-01`,
+        `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API_KEY}&start_date=2019-01-01`,
       )
       const data = await res.data
-      console.log(data)
+      console.log('no err')
       setImgList(data)
       setLoading(false)
     } catch (error) {
+      console.log('err')
       return <h1>Something went wrong!</h1>
     }
   }, [])

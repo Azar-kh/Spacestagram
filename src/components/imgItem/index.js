@@ -38,10 +38,10 @@ const ImgItem = ({ date, hdurl, title, copyright }) => {
 }
 
 ImgItem.propTypes = {
-  date: PropTypes.string,
-  hdurl: PropTypes.string,
-  title: PropTypes.string,
-  copyright: PropTypes.string,
+  date: PropTypes.string.isRequired,
+  hdurl: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  copyright: PropTypes.string.isRequired,
 }
 
 export default ImgItem
